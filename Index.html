@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Faltu Boys Team Members</title>
+    <link rel="stylesheet" href="intro.css"> <!-- CSS ফাইল লিঙ্ক -->
+</head>
+<body>
+
+    <div class="container">
+        <h2>Facebook Profile Links</h2>
+        <button class="profile-button" onclick="showProfile('fahim')">Mohammad Fahim</button>
+        <button class="profile-button" onclick="showProfile('rohan')">Rohan Hossain</button>
+        <button class="profile-button" onclick="showProfile('rohan2')">Md Rohan Khan</button>
+        <button class="profile-button" onclick="showProfile('abir')">Abir Islam</button>
+        <button class="profile-button" onclick="showProfile('asif')">Asif Khan Ashik</button>
+
+        <div id="profileDisplay"></div>
+    </div>
+
+    <script>
+        function showProfile(id) {
+            let profiles = {
+                fahim: {
+                    name: "Mohammad Fahim",
+                    img: "https://ibb.co.com/Zpfw8yDr",
+                    link: "https://www.facebook.com/fahim.profile"
+                },
+                rohan: {
+                    name: "Rohan Hossain",
+                    img: "https://ibb.co.com/Mxn4M0PP",
+                    link: "https://www.facebook.com/rohan.profile"
+                },
+                rohan2: {
+                    name: "Md Rohan Khan",
+                    img: "https://ibb.co.com/fdSnN2sr",
+                    link: "https://www.facebook.com/rohan2.profile"
+                },
+                asif: {
+                    name: "Asif Khan Ashik",
+                    img: "https://ibb.co.com/7dks8whL",
+                    link: "https://www.facebook.com/asif.profile"
+                },
+                abir: {
+                    name: "Abir Islam",
+                    img: "https://ibb.co.com/5WzdDMq5",
+                    link: "https://www.facebook.com/abir.profile"
+                }
+            };
+
+            let profile = profiles[id];
+
+            if (profile) {
+                document.getElementById("profileDisplay").innerHTML = `
+                    <div class="profile-card">
+                        <img src="${profile.img}" alt="${profile.name}" class="profile-img">
+                        <h3>${profile.name}</h3>
+                        <a href="${profile.link}" target="_blank" class="visit-button">Visit Facebook Profile</a>
+                    </div>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>
