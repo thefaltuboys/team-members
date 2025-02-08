@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Faltu Boys Team Members</title>
+    <link rel="stylesheet" href="intro.css"> <!-- CSS ফাইল লিঙ্ক -->
+</head>
+<body>
+
+    <div class="container">
+        <h2>Facebook Profile Links</h2>
+        <button class="profile-button" onclick="showProfile('fahim')">Mohammad Fahim</button>
+        <button class="profile-button" onclick="showProfile('rohan')">Rohan Hossain</button>
+        <button class="profile-button" onclick="showProfile('rohan2')">Md Rohan Khan</button>
+        <button class="profile-button" onclick="showProfile('abir')">Abir Islam</button>
+        <button class="profile-button" onclick="showProfile('asif')">Asif Khan Ashik</button>
+
+        <div id="profileDisplay"></div>
+    </div>
+
+    <script>
+        function showProfile(id) {
+            let profiles = {
+                fahim: {
+                    name: "Mohammad Fahim",
+                    img: "https://graph.facebook.com/Facebook.Com.Error.link/picture?type=large",
+                    link: "https://www.facebook.com/Facebook.Com.Error.link"
+                },
+                rohan: {
+                    name: "Rohan Hossain",
+                    img: "https://graph.facebook.com/rohan.hossain.74565/picture?type=large",
+                    link: "https://www.facebook.com/rohan.hossain.74565"
+                },
+                rohan2: {
+                    name: "Md Rohan Khan",
+                    img: "https://graph.facebook.com/rohan.n.5855/picture?type=large",
+                    link: "https://www.facebook.com/rohan.n.5855"
+                },
+                asif: {
+                    name: "Asif Khan Ashik",
+                    img: "https://graph.facebook.com/asif.khan.ashik.007/picture?type=large",
+                    link: "https://www.facebook.com/asif.khan.ashik.007"
+                },
+                abir: {
+                    name: "Abir Islam",
+                    img: "https://graph.facebook.com/abir.islam.684520/picture?type=large",
+                    link: "https://www.facebook.com/abir.islam.684520"
+                }
+            };
+
+            let profile = profiles[id];
+
+            if (profile) {
+                document.getElementById("profileDisplay").innerHTML = `
+                    <div class="profile-card">
+                        <img src="${profile.img}" alt="${profile.name}">
+                        <h3>${profile.name}</h3>
+                        <a href="${profile.link}" target="_blank" class="visit-button">Visit Facebook Profile</a>
+                    </div>
+                `;
+                document.querySelector(".profile-card").style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

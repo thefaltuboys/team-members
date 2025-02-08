@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    background: radial-gradient(circle at center, #001f3f, #000000);
+    background-size: cover;
+    color: #00ffff;
+    padding: 20px;
+    overflow-x: hidden;
+    animation: galaxy 20s infinite linear;
+}
+
+@keyframes galaxy {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #00ffff;
+}
+
+h2 {
+    text-shadow: 0px 0px 10px #00ffff;
+}
+
+.profile-button, .visit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #000;
+    color: #00ffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #00ffff;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-button::before, .visit-button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 5px;
+    background: linear-gradient(45deg, #00ffff, #0077ff, #00ffff);
+    z-index: -1;
+    transition: 0.4s;
+    filter: blur(10px);
+    opacity: 0.8;
+}
+
+.profile-button:hover, .visit-button:hover {
+    color: #000;
+    background: #00ffff;
+    box-shadow: 0px 0px 15px #00ffff;
+}
+
+.profile-card {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #00ffff;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 15px #00ffff;
+    margin-top: 20px;
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffff;
+    box-shadow: 0px 0px 15px #00ffff;
+}
+
+h3 {
+    color: #00ffff;
+    text-shadow: 0px 0px 8px #00ffff;
+}
